@@ -1,6 +1,7 @@
 import { useState,useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { QuizContext } from "./Contex/QuizContex"
+import ProgressBar from "./ProgressBar"
 
 
 const compnentprops ={
@@ -31,11 +32,11 @@ setUserScore(userScore+1)
 return (
     
     <div className="col-md-6">
-<div className="progress">
-  <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{width:"0%"}} ></div>
-</div>
+        <h3 className="text-info">Question 1/Question 5</h3>
+        <ProgressBar currentProgress="0" />
+
         <div className="alert"><p className="text-warning">Your Score is {userScore}</p></div>
-    <h3>Question 1: What is Cyber Bullying?</h3>
+    <h3> What is Cyber Bullying?</h3>
 
 <button className="btn btn-info btn-lg btn-block mb-2" value="a" onClick={ (e)=> handleUserAnswer(e) }> Bullying Online</button>
 <button className="btn btn-info btn-lg btn-block mb-2" value="b" onClick={handleUserAnswer}> Physical Bullying</button>

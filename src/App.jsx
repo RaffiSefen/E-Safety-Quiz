@@ -9,6 +9,7 @@ import Question3 from './Components/Question3';
 import Question4 from './Components/Question4';
 import Question5 from './Components/Question5';
 import TotalScore from './Components/TotalScore';
+import ProgressBar from './Components/ProgressBar';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <div className="App-body">
-      <Routes>
+              <Routes>
              <Route path="/" element={<HomePage/>} /> 
              <Route path="/questions" element={<QuizHomePage/>}></Route>
         <Route path="/question1" element={<QuizPage/>} />
